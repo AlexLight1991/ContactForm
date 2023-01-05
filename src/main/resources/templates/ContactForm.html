@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+        th:href="${'./css/bootstrap.min.css'}" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="${'./css/style.css'}" />
+    <link rel="icon" href="../static/images/favicon.png" th:href="${'./images/favicon.png'}">
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+
+    <div class="container w-25 p-1">
+        <form th:object="${request}" method="post">
+
+
+
+            <div class="row d-flex justify-content-center">
+                <h2 class="mb-2 py-2 font-weight-bold ">Contact Us</h2>
+            </div>
+            <table class="table  table-primary">
+
+                <tr>
+                    <td>Kind of Request:<br />
+                        <select required pattern="Contact Adjustment|Damage Case|Complaint|" name="type">
+                            <option selected disabled hidden></option>
+                            <option value="Contact Adjustment">Contact Adjustment</option>
+                            <option value="Damage Case">Damage Case</option>
+                            <option value="Complaint">Complaint</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Policy Number:<br />
+                        <input name="policyNumber" type="number" placeholder="123456" step="1" min="1" max="999999" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name:<br />
+                        <input name="name" type="text" placeholder="William" required minlength="1" maxlength="99" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Surname:<br />
+                        <input name="surname" type="text" placeholder="Shakespeare" required minlength="1"
+                            maxlength="99" />
+                    </td>
+                </tr>
+                <tr>
+
+
+                </tr>
+                <tr>
+                    <td>Your Request:<br />
+                        <textarea name="text" type="text" placeholder="Your text..." minlength="1"
+                            maxlength="5000" cols="35" rows="5" wrap="hard" required></textarea>
+                    </td>
+                </tr>
+
+
+
+
+
+
+            </table>
+            <input class="btn btn-success btn-block btn-rounded z-depth-1" type="submit" value="Send" />
+        </form>
+
+    </div>
+
+
+
+
+    <script src="../static/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
