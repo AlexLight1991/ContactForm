@@ -62,4 +62,14 @@ public class ContactRequest {
     public void setText(String text) {
         this.text = text;
     }
+
+    public ContactRequest(int policyNumber, String type, String name, String surname, String text) {
+        this.policyNumber = policyNumber;
+        this.type = type;
+        this.name = name;
+        this.surname = surname;
+        this.text = text;
+    }
+
+    public ContactRequest(){};
 }

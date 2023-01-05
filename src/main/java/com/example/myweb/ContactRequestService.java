@@ -16,9 +16,11 @@ public class ContactRequestService {
         repository.save(request);
     }
 
-    public List getAllContactRequests() {
-        List requestList = new ArrayList();
-        repository.findAll().forEach(request -> requestList.add(request));
-        return requestList;
+    public List<ContactRequest> getAllContactRequests() {
+        return new ArrayList<>(repository.findAll());
+    }
+
+    public void deleteAll(){
+        repository.deleteAll();
     }
 }

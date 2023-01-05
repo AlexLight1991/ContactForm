@@ -12,13 +12,8 @@
 </head>
 
 <body>
-
-
     <div class="container w-25 p-1">
         <form th:object="${request}" method="post">
-
-
-
             <div class="row d-flex justify-content-center">
                 <h2 class="mb-2 py-2 font-weight-bold ">Contact Us</h2>
             </div>
@@ -51,32 +46,19 @@
                     </td>
                 </tr>
                 <tr>
-
-
                 </tr>
                 <tr>
                     <td>Your Request:<br />
-                        <textarea name="text" type="text" placeholder="Your text..." minlength="1"
-                            maxlength="5000" cols="35" rows="5" wrap="hard" required></textarea>
+                        <textarea name="text" type="text" placeholder="Your text..." minlength="1" maxlength="5000"
+                            cols="35" rows="5" wrap="hard" required></textarea>
                     </td>
                 </tr>
-
-
-
-
-
-
             </table>
             <input class="btn btn-success btn-block btn-rounded z-depth-1" type="submit" value="Send" />
         </form>
 
     </div>
-
-
-
-
     <script src="../static/js/bootstrap.min.js"></script>
 </body>
-
 
 </html>
